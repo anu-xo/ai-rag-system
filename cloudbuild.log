@@ -1,0 +1,596 @@
+Creating temporary archive of 82 file(s) totalling 14.3 MiB before compression.
+Uploading tarball of [.] to [gs://agentverse-scholar-zm8cijkkdf0_cloudbuild/source/1771777386.824982-62312b95589b405ba83bfee9ff819424.tgz]
+Created [https://cloudbuild.googleapis.com/v1/projects/agentverse-scholar-zm8cijkkdf0/locations/global/builds/66e61693-85ef-40a9-a1e3-5dfcedc44554].
+Logs are available at [ https://console.cloud.google.com/cloud-build/builds/66e61693-85ef-40a9-a1e3-5dfcedc44554?project=153335137799 ].
+Waiting for build to complete. Polling interval: 1 second(s).
+---------------------------------------------------------- REMOTE BUILD OUTPUT -----------------------------------------------------------
+starting build "66e61693-85ef-40a9-a1e3-5dfcedc44554"
+
+FETCHSOURCE
+Fetching storage object: gs://agentverse-scholar-zm8cijkkdf0_cloudbuild/source/1771777386.824982-62312b95589b405ba83bfee9ff819424.tgz#1771777402037237
+Copying gs://agentverse-scholar-zm8cijkkdf0_cloudbuild/source/1771777386.824982-62312b95589b405ba83bfee9ff819424.tgz#1771777402037237...
+/ [0 files][    0.0 B/ 13.6 MiB]                                                / [1 files][ 13.6 MiB/ 13.6 MiB]                                                
+Operation completed over 1 objects/13.6 MiB.
+BUILD
+Starting Step #0
+Step #0: Already have image (with digest): gcr.io/cloud-builders/docker
+Step #0: Sending build context to Docker daemon  15.09MB
+Step #0: Step 1/14 : FROM node:20-alpine AS builder
+Step #0: 20-alpine: Pulling from library/node
+Step #0: 589002ba0eae: Already exists
+Step #0: ad6d96c196e3: Pulling fs layer
+Step #0: eb87f4721c91: Pulling fs layer
+Step #0: e31b20165522: Pulling fs layer
+Step #0: e31b20165522: Verifying Checksum
+Step #0: e31b20165522: Download complete
+Step #0: eb87f4721c91: Verifying Checksum
+Step #0: eb87f4721c91: Download complete
+Step #0: ad6d96c196e3: Verifying Checksum
+Step #0: ad6d96c196e3: Download complete
+Step #0: ad6d96c196e3: Pull complete
+Step #0: eb87f4721c91: Pull complete
+Step #0: e31b20165522: Pull complete
+Step #0: Digest: sha256:09e2b3d9726018aecf269bd35325f46bf75046a643a66d28360ec71132750ec8
+Step #0: Status: Downloaded newer image for node:20-alpine
+Step #0:  458b0b7c1c60
+Step #0: Step 2/14 : WORKDIR /app/frontend
+Step #0:  Running in 2d164c6cb274
+Step #0: Removing intermediate container 2d164c6cb274
+Step #0:  26c1d1a81f0f
+Step #0: Step 3/14 : COPY frontend/package.json frontend/package-lock.json ./
+Step #0:  8f0341478a5b
+Step #0: Step 4/14 : RUN npm install
+Step #0:  Running in 206eb3e33b41
+Step #0: [91mnpm warn deprecated w3c-hr-time@1.0.2: Use your platform's native performance.now() and performance.timeOrigin.
+Step #0: [0m[91mnpm warn deprecated stable@0.1.8: Modern JS already guarantees Array#sort() is a stable sort, so this library is deprecated. See the compatibility table on MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#browser_compatibility
+Step #0: [0m[91mnpm warn deprecated sourcemap-codec@1.4.8: Please use @jridgewell/sourcemap-codec instead
+Step #0: [0m[91mnpm warn deprecated rollup-plugin-terser@7.0.2: This package has been deprecated and is no longer maintained. Please use @rollup/plugin-terser
+Step #0: [0m[91mnpm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+Step #0: [0m[91mnpm warn deprecated q@1.5.1: You or someone you depend on is using Q, the JavaScript Promise library that gave JavaScript developers strong feelings about promises. They can almost certainly migrate to the native JavaScript promise now. Thank you literally everyone for joining me in this bet against the odds. Be excellent to each other.
+Step #0: npm warn deprecated
+Step #0: npm warn deprecated (For a CapTP with native promises, see @endo/eventual-send and @endo/captp)
+Step #0: [0m[91mnpm warn deprecated workbox-cacheable-response@6.6.0: workbox-background-sync@6.6.0
+Step #0: [0m[91mnpm warn deprecated workbox-google-analytics@6.6.0: It is not compatible with newer versions of GA starting with v4, as long as you are using GAv3 it should be ok, but the package is not longer being maintained
+Step #0: [0m[91mnpm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+Step #0: [0m[91mnpm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+Step #0: [0m[91mnpm warn deprecated domexception@2.0.1: Use your platform's native DOMException instead
+Step #0: [0m[91mnpm warn deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
+Step #0: [0m[91mnpm warn deprecated svgo@1.3.2: This SVGO version is no longer supported. Upgrade to v2.x.x.
+Step #0: [0m[91mnpm warn deprecated @humanwhocodes/object-schema@2.0.3: Use @eslint/object-schema instead
+Step #0: [0m[91mnpm warn deprecated @humanwhocodes/config-array@0.13.0: Use @eslint/config-array instead
+Step #0: [0m[91mnpm warn deprecated @babel/plugin-proposal-private-methods@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-private-methods instead.
+Step #0: [0m[91mnpm warn deprecated @babel/plugin-proposal-optional-chaining@7.21.0: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-optional-chaining instead.
+Step #0: [0m[91mnpm warn deprecated @babel/plugin-proposal-numeric-separator@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-numeric-separator instead.
+Step #0: [0m[91mnpm warn deprecated @babel/plugin-proposal-class-properties@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-class-properties instead.
+Step #0: [0m[91mnpm warn deprecated @babel/plugin-proposal-nullish-coalescing-operator@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-nullish-coalescing-operator instead.
+Step #0: [0m[91mnpm warn deprecated @babel/plugin-proposal-private-property-in-object@7.21.11: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-private-property-in-object instead.
+Step #0: [0m[91mnpm warn deprecated source-map@0.8.0-beta.0: The work that was done in this beta branch won't be included in future versions
+Step #0: [0m[91mnpm warn deprecated eslint@8.57.1: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+Step #0: [0m
+Step #0: added 1331 packages, and audited 1332 packages in 58s
+Step #0: 
+Step #0: 269 packages are looking for funding
+Step #0:   run `npm fund` for details
+Step #0: 
+Step #0: 69 vulnerabilities (1 low, 6 moderate, 62 high)
+Step #0: 
+Step #0: To address issues that do not require attention, run:
+Step #0:   npm audit fix
+Step #0: 
+Step #0: To address all issues (including breaking changes), run:
+Step #0:   npm audit fix --force
+Step #0: 
+Step #0: Run `npm audit` for details.
+Step #0: [91mnpm notice
+Step #0: npm notice New major version of npm available! 10.8.2 -> 11.10.1
+Step #0: npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.10.1
+Step #0: npm notice To update run: npm install -g npm@11.10.1
+Step #0: npm notice
+Step #0: [0mRemoving intermediate container 206eb3e33b41
+Step #0:  34ccf86ffd24
+Step #0: Step 5/14 : COPY frontend/ ./
+Step #0:  7d697f96155f
+Step #0: Step 6/14 : RUN npm run build
+Step #0:  Running in ed2bacc19e4f
+Step #0: 
+Step #0: > frontend@0.1.0 build
+Step #0: > npx react-scripts build
+Step #0:
+Step #0: Creating an optimized production build...
+Step #0: [91mBrowserslist: browsers data (caniuse-lite) is 6 months old. Please run:
+Step #0:   npx update-browserslist-db@latest
+Step #0:   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Step #0: [0m[91mBrowserslist: browsers data (caniuse-lite) is 6 months old. Please run:
+Step #0:   npx update-browserslist-db@latest
+Step #0:   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Step #0: [0mCompiled with warnings.
+Step #0: 
+Step #0: [eslint] 
+Step #0: src/pages/MiniBossPage.js
+Step #0:   Line 10:11:  The 'playerClasses' array makes the dependencies of useEffect Hook (at line 29) change on every render. Move it inside the useEffect callback. Alternatively, wrap the initialization of 'playerClasses' in its own useMemo() Hook  react-hooks/exhaustive-deps
+Step #0:   Line 11:11:  The 'bossOptions' array makes the dependencies of useEffect Hook (at line 17) change on every render. Move it inside the useEffect callback. Alternatively, wrap the initialization of 'bossOptions' in its own useMemo() Hook      react-hooks/exhaustive-deps
+Step #0: 
+Step #0: Search for the keywords to learn more about each warning.
+Step #0: To ignore, add // eslint-disable-next-line to the line before.
+Step #0: 
+Step #0: File sizes after gzip:
+Step #0: 
+Step #0:   83.04 kB  build/static/js/main.545aa22a.js
+Step #0:   2.01 kB   build/static/css/main.38985427.css
+Step #0: 
+Step #0: The project was built assuming it is hosted at /.
+Step #0: You can control this with the homepage field in your package.json.
+Step #0: 
+Step #0: The build folder is ready to be deployed.
+Step #0: You may serve it with a static server:
+Step #0: 
+Step #0:   npm install -g serve
+Step #0:   serve -s build
+Step #0: 
+Step #0: Find out more about deployment here:
+Step #0: 
+Step #0:   https://cra.link/deployment
+Step #0: 
+Step #0: Removing intermediate container ed2bacc19e4f
+Step #0:  0c12c71b3c5c
+Step #0: Step 7/14 : FROM python:3.12-slim
+Step #0: 3.12-slim: Pulling from library/python
+Step #0: 0c8d55a45c0d: Already exists
+Step #0: 690eaffcf0e9: Pulling fs layer
+Step #0: 9395e1d7be50: Pulling fs layer
+Step #0: 4948ee383266: Pulling fs layer
+Step #0: 690eaffcf0e9: Verifying Checksum
+Step #0: 690eaffcf0e9: Download complete
+Step #0: 4948ee383266: Verifying Checksum
+Step #0: 4948ee383266: Download complete
+Step #0: 9395e1d7be50: Verifying Checksum
+Step #0: 9395e1d7be50: Download complete
+Step #0: 690eaffcf0e9: Pull complete
+Step #0: 9395e1d7be50: Pull complete
+Step #0: 4948ee383266: Pull complete
+Step #0: Digest: sha256:9e01bf1ae5db7649a236da7be1e94ffbbbdd7a93f867dd0d8d5720d9e1f89fab
+Step #0: Status: Downloaded newer image for python:3.12-slim
+Step #0:  b3b92273ebb4
+Step #0: Step 8/14 : WORKDIR /app
+Step #0:  Running in 4b3e07db30e3
+Step #0: Removing intermediate container 4b3e07db30e3
+Step #0:  fe5a03038c05
+Step #0: Step 9/14 : COPY --from=builder /app/frontend/build ./frontend/build
+Step #0:  e798ca0ee144
+Step #0: Step 10/14 : COPY backend/ ./backend/
+Step #0:  956780b0b5dd
+Step #0: Step 11/14 : COPY start.sh ./
+Step #0:  f3d093b890a7
+Step #0: Step 12/14 : RUN pip install --no-cache-dir -r backend/requirements.txt
+Step #0:  Running in f443c6bf2f39
+Step #0: Collecting a2a-sdk==0.3.1 (from -r backend/requirements.txt (line 1))
+Step #0:   Downloading a2a_sdk-0.3.1-py3-none-any.whl.metadata (5.8 kB)
+Step #0: Collecting absolufy-imports==0.3.1 (from -r backend/requirements.txt (line 2))
+Step #0:   Downloading absolufy_imports-0.3.1-py2.py3-none-any.whl.metadata (2.9 kB)
+Step #0: Collecting aiohappyeyeballs==2.6.1 (from -r backend/requirements.txt (line 3))
+Step #0:   Downloading aiohappyeyeballs-2.6.1-py3-none-any.whl.metadata (5.9 kB)
+Step #0: Collecting aiohttp==3.12.15 (from -r backend/requirements.txt (line 4))
+Step #0:   Downloading aiohttp-3.12.15-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (7.7 kB)
+Step #0: Collecting aiosignal==1.4.0 (from -r backend/requirements.txt (line 5))
+Step #0:   Downloading aiosignal-1.4.0-py3-none-any.whl.metadata (3.7 kB)
+Step #0: Collecting annotated-types==0.7.0 (from -r backend/requirements.txt (line 6))
+Step #0:   Downloading annotated_types-0.7.0-py3-none-any.whl.metadata (15 kB)
+Step #0: Collecting anyio==4.10.0 (from -r backend/requirements.txt (line 7))
+Step #0:   Downloading anyio-4.10.0-py3-none-any.whl.metadata (4.0 kB)
+Step #0: Collecting attrs==25.3.0 (from -r backend/requirements.txt (line 8))
+Step #0:   Downloading attrs-25.3.0-py3-none-any.whl.metadata (10 kB)
+Step #0: Collecting Authlib==1.6.1 (from -r backend/requirements.txt (line 9))
+Step #0:   Downloading authlib-1.6.1-py2.py3-none-any.whl.metadata (1.6 kB)
+Step #0: Collecting cachetools==5.5.2 (from -r backend/requirements.txt (line 10))
+Step #0:   Downloading cachetools-5.5.2-py3-none-any.whl.metadata (5.4 kB)
+Step #0: Collecting certifi==2025.8.3 (from -r backend/requirements.txt (line 11))
+Step #0:   Downloading certifi-2025.8.3-py3-none-any.whl.metadata (2.4 kB)
+Step #0: Collecting cffi==1.17.1 (from -r backend/requirements.txt (line 12))
+Step #0:   Downloading cffi-1.17.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (1.5 kB)
+Step #0: Collecting charset-normalizer==3.4.3 (from -r backend/requirements.txt (line 13))
+Step #0:   Downloading charset_normalizer-3.4.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (36 kB)
+Step #0: Collecting click==8.2.1 (from -r backend/requirements.txt (line 14))
+Step #0:   Downloading click-8.2.1-py3-none-any.whl.metadata (2.5 kB)
+Step #0: Collecting cloudpickle==3.1.1 (from -r backend/requirements.txt (line 15))
+Step #0:   Downloading cloudpickle-3.1.1-py3-none-any.whl.metadata (7.1 kB)
+Step #0: Collecting cryptography==45.0.6 (from -r backend/requirements.txt (line 16))
+Step #0:   Downloading cryptography-45.0.6-cp311-abi3-manylinux_2_34_x86_64.whl.metadata (5.7 kB)
+Step #0: Collecting docstring_parser==0.17.0 (from -r backend/requirements.txt (line 17))
+Step #0:   Downloading docstring_parser-0.17.0-py3-none-any.whl.metadata (3.5 kB)
+Step #0: Collecting fastapi==0.116.1 (from -r backend/requirements.txt (line 18))
+Step #0:   Downloading fastapi-0.116.1-py3-none-any.whl.metadata (28 kB)
+Step #0: Collecting frozenlist==1.7.0 (from -r backend/requirements.txt (line 19))
+Step #0:   Downloading frozenlist-1.7.0-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (18 kB)
+Step #0: Collecting google-adk==1.11.0 (from -r backend/requirements.txt (line 20))
+Step #0:   Downloading google_adk-1.11.0-py3-none-any.whl.metadata (10 kB)
+Step #0: Collecting google-api-core==2.25.1 (from -r backend/requirements.txt (line 21))
+Step #0:   Downloading google_api_core-2.25.1-py3-none-any.whl.metadata (3.0 kB)
+Step #0: Collecting google-api-python-client==2.179.0 (from -r backend/requirements.txt (line 22))
+Step #0:   Downloading google_api_python_client-2.179.0-py3-none-any.whl.metadata (7.0 kB)
+Step #0: Collecting google-auth==2.40.3 (from -r backend/requirements.txt (line 23))
+Step #0:   Downloading google_auth-2.40.3-py2.py3-none-any.whl.metadata (6.2 kB)
+Step #0: Collecting google-auth-httplib2==0.2.0 (from -r backend/requirements.txt (line 24))
+Step #0:   Downloading google_auth_httplib2-0.2.0-py2.py3-none-any.whl.metadata (2.2 kB)
+Step #0: Collecting google-cloud-aiplatform==1.110.0 (from -r backend/requirements.txt (line 25))
+Step #0:   Downloading google_cloud_aiplatform-1.110.0-py2.py3-none-any.whl.metadata (38 kB)
+Step #0: Collecting google-cloud-appengine-logging==1.6.2 (from -r backend/requirements.txt (line 26))
+Step #0:   Downloading google_cloud_appengine_logging-1.6.2-py3-none-any.whl.metadata (9.9 kB)
+Step #0: Collecting google-cloud-audit-log==0.3.2 (from -r backend/requirements.txt (line 27))
+Step #0:   Downloading google_cloud_audit_log-0.3.2-py3-none-any.whl.metadata (9.0 kB)
+Step #0: Collecting google-cloud-bigquery==3.35.1 (from -r backend/requirements.txt (line 28))
+Step #0:   Downloading google_cloud_bigquery-3.35.1-py3-none-any.whl.metadata (8.0 kB)
+Step #0: Collecting google-cloud-core==2.4.3 (from -r backend/requirements.txt (line 29))
+Step #0:   Downloading google_cloud_core-2.4.3-py2.py3-none-any.whl.metadata (2.7 kB)
+Step #0: Collecting google-cloud-logging==3.12.1 (from -r backend/requirements.txt (line 30))
+Step #0:   Downloading google_cloud_logging-3.12.1-py2.py3-none-any.whl.metadata (5.0 kB)
+Step #0: Collecting google-cloud-resource-manager==1.14.2 (from -r backend/requirements.txt (line 31))
+Step #0:   Downloading google_cloud_resource_manager-1.14.2-py3-none-any.whl.metadata (9.6 kB)
+Step #0: Collecting google-cloud-secret-manager==2.24.0 (from -r backend/requirements.txt (line 32))
+Step #0:   Downloading google_cloud_secret_manager-2.24.0-py3-none-any.whl.metadata (9.7 kB)
+Step #0: Collecting google-cloud-spanner==3.57.0 (from -r backend/requirements.txt (line 33))
+Step #0:   Downloading google_cloud_spanner-3.57.0-py3-none-any.whl.metadata (11 kB)
+Step #0: Collecting google-cloud-speech==2.33.0 (from -r backend/requirements.txt (line 34))
+Step #0:   Downloading google_cloud_speech-2.33.0-py3-none-any.whl.metadata (9.6 kB)
+Step #0: Collecting google-cloud-storage==2.19.0 (from -r backend/requirements.txt (line 35))
+Step #0:   Downloading google_cloud_storage-2.19.0-py2.py3-none-any.whl.metadata (9.1 kB)
+Step #0: Collecting google-cloud-trace==1.16.2 (from -r backend/requirements.txt (line 36))
+Step #0:   Downloading google_cloud_trace-1.16.2-py3-none-any.whl.metadata (9.7 kB)
+Step #0: Collecting google-crc32c==1.7.1 (from -r backend/requirements.txt (line 37))
+Step #0:   Downloading google_crc32c-1.7.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.3 kB)
+Step #0: Collecting google-genai==1.31.0 (from -r backend/requirements.txt (line 38))
+Step #0:   Downloading google_genai-1.31.0-py3-none-any.whl.metadata (43 kB)
+Step #0: Collecting google-resumable-media==2.7.2 (from -r backend/requirements.txt (line 39))
+Step #0:   Downloading google_resumable_media-2.7.2-py2.py3-none-any.whl.metadata (2.2 kB)
+Step #0: Collecting googleapis-common-protos==1.70.0 (from -r backend/requirements.txt (line 40))
+Step #0:   Downloading googleapis_common_protos-1.70.0-py3-none-any.whl.metadata (9.3 kB)
+Step #0: Collecting graphviz==0.21 (from -r backend/requirements.txt (line 41))
+Step #0:   Downloading graphviz-0.21-py3-none-any.whl.metadata (12 kB)
+Step #0: Collecting grpc-google-iam-v1==0.14.2 (from -r backend/requirements.txt (line 42))
+Step #0:   Downloading grpc_google_iam_v1-0.14.2-py3-none-any.whl.metadata (9.1 kB)
+Step #0: Collecting grpc-interceptor==0.15.4 (from -r backend/requirements.txt (line 43))
+Step #0:   Downloading grpc_interceptor-0.15.4-py3-none-any.whl.metadata (8.4 kB)
+Step #0: Collecting grpcio==1.74.0 (from -r backend/requirements.txt (line 44))
+Step #0:   Downloading grpcio-1.74.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.8 kB)
+Step #0: Collecting grpcio-status==1.74.0 (from -r backend/requirements.txt (line 45))
+Step #0:   Downloading grpcio_status-1.74.0-py3-none-any.whl.metadata (1.1 kB)
+Step #0: Collecting h11==0.16.0 (from -r backend/requirements.txt (line 46))
+Step #0:   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+Step #0: Collecting httpcore==1.0.9 (from -r backend/requirements.txt (line 47))
+Step #0:   Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+Step #0: Collecting httplib2==0.22.0 (from -r backend/requirements.txt (line 48))
+Step #0:   Downloading httplib2-0.22.0-py3-none-any.whl.metadata (2.6 kB)
+Step #0: Collecting httptools==0.6.4 (from -r backend/requirements.txt (line 49))
+Step #0:   Downloading httptools-0.6.4-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.6 kB)
+Step #0: Collecting httpx==0.28.1 (from -r backend/requirements.txt (line 50))
+Step #0:   Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+Step #0: Collecting httpx-sse==0.4.1 (from -r backend/requirements.txt (line 51))
+Step #0:   Downloading httpx_sse-0.4.1-py3-none-any.whl.metadata (9.4 kB)
+Step #0: Collecting idna==3.10 (from -r backend/requirements.txt (line 52))
+Step #0:   Downloading idna-3.10-py3-none-any.whl.metadata (10 kB)
+Step #0: Collecting importlib_metadata==8.7.0 (from -r backend/requirements.txt (line 53))
+Step #0:   Downloading importlib_metadata-8.7.0-py3-none-any.whl.metadata (4.8 kB)
+Step #0: Collecting jsonschema==4.25.1 (from -r backend/requirements.txt (line 54))
+Step #0:   Downloading jsonschema-4.25.1-py3-none-any.whl.metadata (7.6 kB)
+Step #0: Collecting jsonschema-specifications==2025.4.1 (from -r backend/requirements.txt (line 55))
+Step #0:   Downloading jsonschema_specifications-2025.4.1-py3-none-any.whl.metadata (2.9 kB)
+Step #0: Collecting mcp==1.13.0 (from -r backend/requirements.txt (line 56))
+Step #0:   Downloading mcp-1.13.0-py3-none-any.whl.metadata (68 kB)
+Step #0: Collecting multidict==6.6.4 (from -r backend/requirements.txt (line 57))
+Step #0:   Downloading multidict-6.6.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (5.3 kB)
+Step #0: Collecting numpy==2.3.2 (from -r backend/requirements.txt (line 58))
+Step #0:   Downloading numpy-2.3.2-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+Step #0: Collecting opentelemetry-api==1.36.0 (from -r backend/requirements.txt (line 59))
+Step #0:   Downloading opentelemetry_api-1.36.0-py3-none-any.whl.metadata (1.5 kB)
+Step #0: Collecting opentelemetry-exporter-gcp-trace==1.9.0 (from -r backend/requirements.txt (line 60))
+Step #0:   Downloading opentelemetry_exporter_gcp_trace-1.9.0-py3-none-any.whl.metadata (3.3 kB)
+Step #0: Collecting opentelemetry-resourcedetector-gcp==1.9.0a0 (from -r backend/requirements.txt (line 61))
+Step #0:   Downloading opentelemetry_resourcedetector_gcp-1.9.0a0-py3-none-any.whl.metadata (2.4 kB)
+Step #0: Collecting opentelemetry-sdk==1.36.0 (from -r backend/requirements.txt (line 62))
+Step #0:   Downloading opentelemetry_sdk-1.36.0-py3-none-any.whl.metadata (1.5 kB)
+Step #0: Collecting opentelemetry-semantic-conventions==0.57b0 (from -r backend/requirements.txt (line 63))
+Step #0:   Downloading opentelemetry_semantic_conventions-0.57b0-py3-none-any.whl.metadata (2.4 kB)
+Step #0: Collecting packaging==25.0 (from -r backend/requirements.txt (line 64))
+Step #0:   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+Step #0: Collecting propcache==0.3.2 (from -r backend/requirements.txt (line 65))
+Step #0:   Downloading propcache-0.3.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (12 kB)
+Step #0: Collecting proto-plus==1.26.1 (from -r backend/requirements.txt (line 66))
+Step #0:   Downloading proto_plus-1.26.1-py3-none-any.whl.metadata (2.2 kB)
+Step #0: Collecting protobuf==6.32.0 (from -r backend/requirements.txt (line 67))
+Step #0:   Downloading protobuf-6.32.0-cp39-abi3-manylinux2014_x86_64.whl.metadata (593 bytes)
+Step #0: Collecting pyasn1==0.6.1 (from -r backend/requirements.txt (line 68))
+Step #0:   Downloading pyasn1-0.6.1-py3-none-any.whl.metadata (8.4 kB)
+Step #0: Collecting pyasn1_modules==0.4.2 (from -r backend/requirements.txt (line 69))
+Step #0:   Downloading pyasn1_modules-0.4.2-py3-none-any.whl.metadata (3.5 kB)
+Step #0: Collecting pycparser==2.22 (from -r backend/requirements.txt (line 70))
+Step #0:   Downloading pycparser-2.22-py3-none-any.whl.metadata (943 bytes)
+Step #0: Collecting pydantic==2.11.7 (from -r backend/requirements.txt (line 71))
+Step #0:   Downloading pydantic-2.11.7-py3-none-any.whl.metadata (67 kB)
+Step #0: Collecting pydantic-settings==2.10.1 (from -r backend/requirements.txt (line 72))
+Step #0:   Downloading pydantic_settings-2.10.1-py3-none-any.whl.metadata (3.4 kB)
+Step #0: Collecting pydantic_core==2.33.2 (from -r backend/requirements.txt (line 73))
+Step #0:   Downloading pydantic_core-2.33.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.8 kB)
+Step #0: Collecting pyparsing==3.2.3 (from -r backend/requirements.txt (line 74))
+Step #0:   Downloading pyparsing-3.2.3-py3-none-any.whl.metadata (5.0 kB)
+Step #0: Collecting python-dateutil==2.9.0.post0 (from -r backend/requirements.txt (line 75))
+Step #0:   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+Step #0: Collecting python-dotenv==1.1.1 (from -r backend/requirements.txt (line 76))
+Step #0:   Downloading python_dotenv-1.1.1-py3-none-any.whl.metadata (24 kB)
+Step #0: Collecting python-multipart==0.0.20 (from -r backend/requirements.txt (line 77))
+Step #0:   Downloading python_multipart-0.0.20-py3-none-any.whl.metadata (1.8 kB)
+Step #0: Collecting PyYAML==6.0.2 (from -r backend/requirements.txt (line 78))
+Step #0:   Downloading PyYAML-6.0.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.1 kB)
+Step #0: Collecting referencing==0.36.2 (from -r backend/requirements.txt (line 79))
+Step #0:   Downloading referencing-0.36.2-py3-none-any.whl.metadata (2.8 kB)
+Step #0: Collecting requests==2.32.5 (from -r backend/requirements.txt (line 80))
+Step #0:   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+Step #0: Collecting rpds-py==0.27.0 (from -r backend/requirements.txt (line 81))
+Step #0:   Downloading rpds_py-0.27.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.2 kB)
+Step #0: Collecting rsa==4.9.1 (from -r backend/requirements.txt (line 82))
+Step #0:   Downloading rsa-4.9.1-py3-none-any.whl.metadata (5.6 kB)
+Step #0: Collecting shapely==2.1.1 (from -r backend/requirements.txt (line 83))
+Step #0:   Downloading shapely-2.1.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.7 kB)
+Step #0: Collecting six==1.17.0 (from -r backend/requirements.txt (line 84))
+Step #0:   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Step #0: Collecting sniffio==1.3.1 (from -r backend/requirements.txt (line 85))
+Step #0:   Downloading sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+Step #0: Collecting SQLAlchemy==2.0.43 (from -r backend/requirements.txt (line 86))
+Step #0:   Downloading sqlalchemy-2.0.43-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (9.6 kB)
+Step #0: Collecting sqlparse==0.5.3 (from -r backend/requirements.txt (line 87))
+Step #0:   Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+Step #0: Collecting sse-starlette==3.0.2 (from -r backend/requirements.txt (line 88))
+Step #0:   Downloading sse_starlette-3.0.2-py3-none-any.whl.metadata (11 kB)
+Step #0: Collecting starlette==0.47.2 (from -r backend/requirements.txt (line 89))
+Step #0:   Downloading starlette-0.47.2-py3-none-any.whl.metadata (6.2 kB)
+Step #0: Collecting tenacity==8.5.0 (from -r backend/requirements.txt (line 90))
+Step #0:   Downloading tenacity-8.5.0-py3-none-any.whl.metadata (1.2 kB)
+Step #0: Collecting typing-inspection==0.4.1 (from -r backend/requirements.txt (line 91))
+Step #0:   Downloading typing_inspection-0.4.1-py3-none-any.whl.metadata (2.6 kB)
+Step #0: Collecting typing_extensions==4.14.1 (from -r backend/requirements.txt (line 92))
+Step #0:   Downloading typing_extensions-4.14.1-py3-none-any.whl.metadata (3.0 kB)
+Step #0: Collecting tzlocal==5.3.1 (from -r backend/requirements.txt (line 93))
+Step #0:   Downloading tzlocal-5.3.1-py3-none-any.whl.metadata (7.6 kB)
+Step #0: Collecting uritemplate==4.2.0 (from -r backend/requirements.txt (line 94))
+Step #0:   Downloading uritemplate-4.2.0-py3-none-any.whl.metadata (2.6 kB)
+Step #0: Collecting urllib3==2.5.0 (from -r backend/requirements.txt (line 95))
+Step #0:   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+Step #0: Collecting uvicorn==0.35.0 (from -r backend/requirements.txt (line 96))
+Step #0:   Downloading uvicorn-0.35.0-py3-none-any.whl.metadata (6.5 kB)
+Step #0: Collecting uvloop==0.21.0 (from -r backend/requirements.txt (line 97))
+Step #0:   Downloading uvloop-0.21.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.9 kB)
+Step #0: Collecting watchdog==6.0.0 (from -r backend/requirements.txt (line 98))
+Step #0:   Downloading watchdog-6.0.0-py3-none-manylinux2014_x86_64.whl.metadata (44 kB)
+Step #0: Collecting watchfiles==1.1.0 (from -r backend/requirements.txt (line 99))
+Step #0:   Downloading watchfiles-1.1.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.9 kB)
+Step #0: Collecting websockets==15.0.1 (from -r backend/requirements.txt (line 100))
+Step #0:   Downloading websockets-15.0.1-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.8 kB)
+Step #0: Collecting yarl==1.20.1 (from -r backend/requirements.txt (line 101))
+Step #0:   Downloading yarl-1.20.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (73 kB)
+Step #0: Collecting zipp==3.23.0 (from -r backend/requirements.txt (line 102))
+Step #0:   Downloading zipp-3.23.0-py3-none-any.whl.metadata (3.6 kB)
+Step #0: Collecting greenlet>=1 (from SQLAlchemy==2.0.43->-r backend/requirements.txt (line 86))
+Step #0:   Downloading greenlet-3.3.2-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (3.7 kB)
+Step #0: Downloading a2a_sdk-0.3.1-py3-none-any.whl (133 kB)
+Step #0: Downloading absolufy_imports-0.3.1-py2.py3-none-any.whl (5.9 kB)
+Step #0: Downloading aiohappyeyeballs-2.6.1-py3-none-any.whl (15 kB)
+Step #0: Downloading aiohttp-3.12.15-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.7 MB)
+Step #0:    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.7/1.7 MB 98.1 MB/s eta 0:00:00
+Step #0: Downloading aiosignal-1.4.0-py3-none-any.whl (7.5 kB)
+Step #0: Downloading annotated_types-0.7.0-py3-none-any.whl (13 kB)
+Step #0: Downloading anyio-4.10.0-py3-none-any.whl (107 kB)
+Step #0: Downloading attrs-25.3.0-py3-none-any.whl (63 kB)
+Step #0: Downloading authlib-1.6.1-py2.py3-none-any.whl (239 kB)
+Step #0: Downloading cachetools-5.5.2-py3-none-any.whl (10 kB)
+Step #0: Downloading certifi-2025.8.3-py3-none-any.whl (161 kB)
+Step #0: Downloading cffi-1.17.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (479 kB)
+Step #0: Downloading charset_normalizer-3.4.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+Step #0: Downloading click-8.2.1-py3-none-any.whl (102 kB)
+Step #0: Downloading cloudpickle-3.1.1-py3-none-any.whl (20 kB)
+Step #0: Downloading cryptography-45.0.6-cp311-abi3-manylinux_2_34_x86_64.whl (4.5 MB)
+Step #0:    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 207.4 MB/s eta 0:00:00
+Step #0: Downloading docstring_parser-0.17.0-py3-none-any.whl (36 kB)
+Step #0: Downloading fastapi-0.116.1-py3-none-any.whl (95 kB)
+Step #0: Downloading frozenlist-1.7.0-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (241 kB)
+Step #0: Downloading google_adk-1.11.0-py3-none-any.whl (1.8 MB)
+Step #0:    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 241.9 MB/s eta 0:00:00
+Step #0: Downloading google_api_core-2.25.1-py3-none-any.whl (160 kB)
+Step #0: Downloading google_api_python_client-2.179.0-py3-none-any.whl (14.0 MB)
+Step #0:    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 14.0/14.0 MB 195.1 MB/s eta 0:00:00
+Step #0: Downloading google_auth-2.40.3-py2.py3-none-any.whl (216 kB)
+Step #0: Downloading google_auth_httplib2-0.2.0-py2.py3-none-any.whl (9.3 kB)
+Step #0: Downloading google_cloud_aiplatform-1.110.0-py2.py3-none-any.whl (7.9 MB)
+Step #0:    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.9/7.9 MB 154.8 MB/s eta 0:00:00
+Step #0: Downloading google_cloud_appengine_logging-1.6.2-py3-none-any.whl (16 kB)
+Step #0: Downloading google_cloud_audit_log-0.3.2-py3-none-any.whl (32 kB)
+Step #0: Downloading google_cloud_bigquery-3.35.1-py3-none-any.whl (256 kB)
+Step #0: Downloading google_cloud_core-2.4.3-py2.py3-none-any.whl (29 kB)
+Step #0: Downloading google_cloud_logging-3.12.1-py2.py3-none-any.whl (229 kB)
+Step #0: Downloading google_cloud_resource_manager-1.14.2-py3-none-any.whl (394 kB)
+Step #0: Downloading google_cloud_secret_manager-2.24.0-py3-none-any.whl (218 kB)
+Step #0: Downloading google_cloud_spanner-3.57.0-py3-none-any.whl (501 kB)
+Step #0: Downloading google_cloud_speech-2.33.0-py3-none-any.whl (335 kB)
+Step #0: Downloading google_cloud_storage-2.19.0-py2.py3-none-any.whl (131 kB)
+Step #0: Downloading google_cloud_trace-1.16.2-py3-none-any.whl (103 kB)
+Step #0: Downloading google_crc32c-1.7.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (32 kB)
+Step #0: Downloading google_genai-1.31.0-py3-none-any.whl (231 kB)
+Step #0: Downloading google_resumable_media-2.7.2-py2.py3-none-any.whl (81 kB)
+Step #0: Downloading googleapis_common_protos-1.70.0-py3-none-any.whl (294 kB)
+Step #0: Downloading graphviz-0.21-py3-none-any.whl (47 kB)
+Step #0: Downloading grpc_google_iam_v1-0.14.2-py3-none-any.whl (19 kB)
+Step #0: Downloading grpc_interceptor-0.15.4-py3-none-any.whl (20 kB)
+Step #0: Downloading grpcio-1.74.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (6.2 MB)
+Step #0:    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.2/6.2 MB 161.0 MB/s eta 0:00:00
+Step #0: Downloading grpcio_status-1.74.0-py3-none-any.whl (14 kB)
+Step #0: Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+Step #0: Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+Step #0: Downloading httplib2-0.22.0-py3-none-any.whl (96 kB)
+Step #0: Downloading httptools-0.6.4-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (510 kB)
+Step #0: Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+Step #0: Downloading httpx_sse-0.4.1-py3-none-any.whl (8.1 kB)
+Step #0: Downloading idna-3.10-py3-none-any.whl (70 kB)
+Step #0: Downloading importlib_metadata-8.7.0-py3-none-any.whl (27 kB)
+Step #0: Downloading jsonschema-4.25.1-py3-none-any.whl (90 kB)
+Step #0: Downloading jsonschema_specifications-2025.4.1-py3-none-any.whl (18 kB)
+Step #0: Downloading mcp-1.13.0-py3-none-any.whl (160 kB)
+Step #0: Downloading multidict-6.6.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (256 kB)
+Step #0: Downloading numpy-2.3.2-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.6 MB)
+Step #0:    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.6/16.6 MB 161.9 MB/s eta 0:00:00
+Step #0: Downloading opentelemetry_api-1.36.0-py3-none-any.whl (65 kB)
+Step #0: Downloading opentelemetry_exporter_gcp_trace-1.9.0-py3-none-any.whl (13 kB)
+Step #0: Downloading opentelemetry_resourcedetector_gcp-1.9.0a0-py3-none-any.whl (20 kB)
+Step #0: Downloading opentelemetry_sdk-1.36.0-py3-none-any.whl (119 kB)
+Step #0: Downloading opentelemetry_semantic_conventions-0.57b0-py3-none-any.whl (201 kB)
+Step #0: Downloading packaging-25.0-py3-none-any.whl (66 kB)
+Step #0: Downloading propcache-0.3.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (224 kB)
+Step #0: Downloading proto_plus-1.26.1-py3-none-any.whl (50 kB)
+Step #0: Downloading protobuf-6.32.0-cp39-abi3-manylinux2014_x86_64.whl (322 kB)
+Step #0: Downloading pyasn1-0.6.1-py3-none-any.whl (83 kB)
+Step #0: Downloading pyasn1_modules-0.4.2-py3-none-any.whl (181 kB)
+Step #0: Downloading pycparser-2.22-py3-none-any.whl (117 kB)
+Step #0: Downloading pydantic-2.11.7-py3-none-any.whl (444 kB)
+Step #0: Downloading pydantic_settings-2.10.1-py3-none-any.whl (45 kB)
+Step #0: Downloading pydantic_core-2.33.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.0 MB)
+Step #0:    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 169.2 MB/s eta 0:00:00
+Step #0: Downloading pyparsing-3.2.3-py3-none-any.whl (111 kB)
+Step #0: Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+Step #0: Downloading python_dotenv-1.1.1-py3-none-any.whl (20 kB)
+Step #0: Downloading python_multipart-0.0.20-py3-none-any.whl (24 kB)
+Step #0: Downloading PyYAML-6.0.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (767 kB)
+Step #0:    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 767.5/767.5 kB 406.7 MB/s eta 0:00:00
+Step #0: Downloading referencing-0.36.2-py3-none-any.whl (26 kB)
+Step #0: Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+Step #0: Downloading rpds_py-0.27.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (386 kB)
+Step #0: Downloading rsa-4.9.1-py3-none-any.whl (34 kB)
+Step #0: Downloading shapely-2.1.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.1 MB)
+Step #0:    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.1/3.1 MB 162.4 MB/s eta 0:00:00
+Step #0: Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+Step #0: Downloading sniffio-1.3.1-py3-none-any.whl (10 kB)
+Step #0: Downloading sqlalchemy-2.0.43-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.3 MB)
+Step #0:    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 167.8 MB/s eta 0:00:00
+Step #0: Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+Step #0: Downloading sse_starlette-3.0.2-py3-none-any.whl (11 kB)
+Step #0: Downloading starlette-0.47.2-py3-none-any.whl (72 kB)
+Step #0: Downloading tenacity-8.5.0-py3-none-any.whl (28 kB)
+Step #0: Downloading typing_inspection-0.4.1-py3-none-any.whl (14 kB)
+Step #0: Downloading typing_extensions-4.14.1-py3-none-any.whl (43 kB)
+Step #0: Downloading tzlocal-5.3.1-py3-none-any.whl (18 kB)
+Step #0: Downloading uritemplate-4.2.0-py3-none-any.whl (11 kB)
+Step #0: Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+Step #0: Downloading uvicorn-0.35.0-py3-none-any.whl (66 kB)
+Step #0: Downloading uvloop-0.21.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (4.7 MB)
+Step #0:    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.7/4.7 MB 165.3 MB/s eta 0:00:00
+Step #0: Downloading watchdog-6.0.0-py3-none-manylinux2014_x86_64.whl (79 kB)
+Step #0: Downloading watchfiles-1.1.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (452 kB)
+Step #0: Downloading websockets-15.0.1-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (182 kB)
+Step #0: Downloading yarl-1.20.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (355 kB)
+Step #0: Downloading zipp-3.23.0-py3-none-any.whl (10 kB)
+Step #0: Downloading greenlet-3.3.2-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (613 kB)
+Step #0:    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 613.9/613.9 kB 469.4 MB/s eta 0:00:00
+Step #0: Installing collected packages: zipp, websockets, watchdog, uvloop, urllib3, uritemplate, tzlocal, typing_extensions, tenacity, sqlparse, sniffio, six, rpds-py, PyYAML, python-multipart, python-dotenv, pyparsing, pycparser, pyasn1, protobuf, propcache, packaging, numpy, multidict, idna, httpx-sse, httptools, h11, grpcio, greenlet, graphviz, google-crc32c, frozenlist, docstring_parser, cloudpickle, click, charset-normalizer, certifi, cachetools, attrs, annotated-types, aiohappyeyeballs, absolufy-imports, yarl, uvicorn, typing-inspection, SQLAlchemy, shapely, rsa, requests, referencing, python-dateutil, pydantic_core, pyasn1_modules, proto-plus, importlib_metadata, httplib2, httpcore, grpc-interceptor, googleapis-common-protos, google-resumable-media, cffi, anyio, aiosignal, watchfiles, starlette, sse-starlette, pydantic, opentelemetry-api, jsonschema-specifications, httpx, grpcio-status, google-cloud-audit-log, google-auth, cryptography, aiohttp, pydantic-settings, opentelemetry-semantic-conventions, jsonschema, grpc-google-iam-v1, google-genai, google-auth-httplib2, google-api-core, fastapi, Authlib, opentelemetry-sdk, mcp, google-cloud-core, google-api-python-client, a2a-sdk, opentelemetry-resourcedetector-gcp, google-cloud-trace, google-cloud-storage, google-cloud-speech, google-cloud-spanner, google-cloud-secret-manager, google-cloud-resource-manager, google-cloud-bigquery, google-cloud-appengine-logging, opentelemetry-exporter-gcp-trace, google-cloud-logging, google-cloud-aiplatform, google-adk
+Step #0: Successfully installed Authlib-1.6.1 PyYAML-6.0.2 SQLAlchemy-2.0.43 a2a-sdk-0.3.1 absolufy-imports-0.3.1 aiohappyeyeballs-2.6.1 aiohttp-3.12.15 aiosignal-1.4.0 annotated-types-0.7.0 anyio-4.10.0 attrs-25.3.0 cachetools-5.5.2 certifi-2025.8.3 cffi-1.17.1 charset-normalizer-3.4.3 click-8.2.1 cloudpickle-3.1.1 cryptography-45.0.6 docstring_parser-0.17.0 fastapi-0.116.1 frozenlist-1.7.0 google-adk-1.11.0 google-api-core-2.25.1 google-api-python-client-2.179.0 google-auth-2.40.3 google-auth-httplib2-0.2.0 google-cloud-aiplatform-1.110.0 google-cloud-appengine-logging-1.6.2 google-cloud-audit-log-0.3.2 google-cloud-bigquery-3.35.1 google-cloud-core-2.4.3 google-cloud-logging-3.12.1 google-cloud-resource-manager-1.14.2 google-cloud-secret-manager-2.24.0 google-cloud-spanner-3.57.0 google-cloud-speech-2.33.0 google-cloud-storage-2.19.0 google-cloud-trace-1.16.2 google-crc32c-1.7.1 google-genai-1.31.0 google-resumable-media-2.7.2 googleapis-common-protos-1.70.0 graphviz-0.21 greenlet-3.3.2 grpc-google-iam-v1-0.14.2 grpc-interceptor-0.15.4 grpcio-1.74.0 grpcio-status-1.74.0 h11-0.16.0 httpcore-1.0.9 httplib2-0.22.0 httptools-0.6.4 httpx-0.28.1 httpx-sse-0.4.1 idna-3.10 importlib_metadata-8.7.0 jsonschema-4.25.1 jsonschema-specifications-2025.4.1 mcp-1.13.0 multidict-6.6.4 numpy-2.3.2 opentelemetry-api-1.36.0 opentelemetry-exporter-gcp-trace-1.9.0 opentelemetry-resourcedetector-gcp-1.9.0a0 opentelemetry-sdk-1.36.0 opentelemetry-semantic-conventions-0.57b0 packaging-25.0 propcache-0.3.2 proto-plus-1.26.1 protobuf-6.32.0 pyasn1-0.6.1 pyasn1_modules-0.4.2 pycparser-2.22 pydantic-2.11.7 pydantic-settings-2.10.1 pydantic_core-2.33.2 pyparsing-3.2.3 python-dateutil-2.9.0.post0 python-dotenv-1.1.1 python-multipart-0.0.20 referencing-0.36.2 requests-2.32.5 rpds-py-0.27.0 rsa-4.9.1 shapely-2.1.1 six-1.17.0 sniffio-1.3.1 sqlparse-0.5.3 sse-starlette-3.0.2 starlette-0.47.2 tenacity-8.5.0 typing-inspection-0.4.1 typing_extensions-4.14.1 tzlocal-5.3.1 uritemplate-4.2.0 urllib3-2.5.0 uvicorn-0.35.0 uvloop-0.21.0 watchdog-6.0.0 watchfiles-1.1.0 websockets-15.0.1 yarl-1.20.1 zipp-3.23.0
+Step #0: [91mWARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+Step #0: [0m[91m
+Step #0: [notice] A new release of pip is available: 25.0.1 -> 26.0.1
+Step #0: [notice] To update, run: pip install --upgrade pip
+Step #0: [0mRemoving intermediate container f443c6bf2f39
+Step #0:  6711df94352f
+Step #0: Step 13/14 : EXPOSE 8000
+Step #0:  Running in 724d0d8f104e
+Step #0: Removing intermediate container 724d0d8f104e
+Step #0:  2e3656eb617b
+Step #0: Step 14/14 : CMD ["./start.sh"]
+Step #0:  Running in 694090e6b758
+Step #0: Removing intermediate container 694090e6b758
+Step #0:  211b7f907085
+Step #0: Successfully built 211b7f907085
+Step #0: Successfully tagged us-central1-docker.pkg.dev/agentverse-scholar-zm8cijkkdf0/agentverse-repo/agentverse-dungeon:latest
+Finished Step #0
+Starting Step #1
+Step #1: Already have image (with digest): gcr.io/cloud-builders/docker
+Step #1: The push refers to repository [us-central1-docker.pkg.dev/agentverse-scholar-zm8cijkkdf0/agentverse-repo/agentverse-dungeon]
+Step #1: 1ebac30fa019: Preparing
+Step #1: e9006581e2ef: Preparing
+Step #1: 6ecc03fc7242: Preparing
+Step #1: 5e32ef0d5097: Preparing
+Step #1: bdb7b6c46200: Preparing
+Step #1: e606afe81a9a: Preparing
+Step #1: 50b7356375f2: Preparing
+Step #1: 2cb59db770d1: Preparing
+Step #1: a8ff6f8cbdfd: Preparing
+Step #1: bdb7b6c46200: Pushed
+Step #1: e9006581e2ef: Pushed
+Step #1: 6ecc03fc7242: Pushed
+Step #1: e606afe81a9a: Pushed
+Step #1: 5e32ef0d5097: Pushed
+Step #1: 2cb59db770d1: Pushed
+Step #1: 50b7356375f2: Pushed
+Step #1: a8ff6f8cbdfd: Pushed
+Step #1: 1ebac30fa019: Pushed
+Step #1: latest: digest: sha256:cbb7c9331dd4a6b43c5ffb1013967bf7a6c4441eed202e61c5630a7e2501c82d size: 2207
+Finished Step #1
+Starting Step #2
+Step #2: Pulling image: gcr.io/google.com/cloudsdktool/cloud-sdk
+Step #2: Using default tag: latest
+Step #2: latest: Pulling from google.com/cloudsdktool/cloud-sdk
+Step #2: 6bc9f599b3ef: Already exists
+Step #2: 625caf988bdd: Pulling fs layer
+Step #2: af44e508a374: Pulling fs layer
+Step #2: c0b851003699: Pulling fs layer
+Step #2: 639f5578dcee: Pulling fs layer
+Step #2: c34266747ed6: Pulling fs layer
+Step #2: c34266747ed6: Verifying Checksum
+Step #2: c34266747ed6: Download complete
+Step #2: 639f5578dcee: Verifying Checksum
+Step #2: 639f5578dcee: Download complete
+Step #2: 625caf988bdd: Verifying Checksum
+Step #2: 625caf988bdd: Download complete
+Step #2: 625caf988bdd: Pull complete
+Step #2: c0b851003699: Verifying Checksum
+Step #2: c0b851003699: Download complete
+Step #2: af44e508a374: Verifying Checksum
+Step #2: af44e508a374: Download complete
+Step #2: af44e508a374: Pull complete
+Step #2: c0b851003699: Pull complete
+Step #2: 639f5578dcee: Pull complete
+Step #2: c34266747ed6: Pull complete
+Step #2: Digest: sha256:06a9a05427015a2bb57aa718ba10e116d7dbe9e19c6930f677c2fa85c327e7db
+Step #2: Status: Downloaded newer image for gcr.io/google.com/cloudsdktool/cloud-sdk:latest
+Step #2: gcr.io/google.com/cloudsdktool/cloud-sdk:latest
+Step #2: Deploying container to Cloud Run service [agentverse-dungeon] in project [agentverse-scholar-zm8cijkkdf0] region [us-central1]
+Step #2: Deploying new service...
+Step #2: Setting IAM Policy.............done
+Step #2: Creating Revision..........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................done
+Step #2: Routing traffic.....done
+Step #2: Done.
+Step #2: Service [agentverse-dungeon] revision [agentverse-dungeon-00001-5jb] has been deployed and is serving 100 percent of traffic.
+Step #2: Service URL: https://agentverse-dungeon-153335137799.us-central1.run.app
+Finished Step #2
+PUSH
+Pushing us-central1-docker.pkg.dev/agentverse-scholar-zm8cijkkdf0/agentverse-repo/agentverse-dungeon:latest
+The push refers to repository [us-central1-docker.pkg.dev/agentverse-scholar-zm8cijkkdf0/agentverse-repo/agentverse-dungeon]
+1ebac30fa019: Preparing
+e9006581e2ef: Preparing
+6ecc03fc7242: Preparing
+5e32ef0d5097: Preparing
+bdb7b6c46200: Preparing
+e606afe81a9a: Preparing
+50b7356375f2: Preparing
+2cb59db770d1: Preparing
+a8ff6f8cbdfd: Preparing
+50b7356375f2: Layer already exists
+2cb59db770d1: Layer already exists
+bdb7b6c46200: Layer already exists
+1ebac30fa019: Layer already exists
+a8ff6f8cbdfd: Layer already exists
+e9006581e2ef: Layer already exists
+6ecc03fc7242: Layer already exists
+5e32ef0d5097: Layer already exists
+e606afe81a9a: Layer already exists
+latest: digest: sha256:cbb7c9331dd4a6b43c5ffb1013967bf7a6c4441eed202e61c5630a7e2501c82d size: 2207
+DONE
+------------------------------------------------------------------------------------------------------------------------------------------
+ID: 66e61693-85ef-40a9-a1e3-5dfcedc44554
+CREATE_TIME: 2026-02-22T16:23:23+00:00
+DURATION: 6M17S
+SOURCE: gs://agentverse-scholar-zm8cijkkdf0_cloudbuild/source/1771777386.824982-62312b95589b405ba83bfee9ff819424.tgz
+IMAGES: us-central1-docker.pkg.dev/agentverse-scholar-zm8cijkkdf0/agentverse-repo/agentverse-dungeon (+1 more)
+STATUS: SUCCESS
